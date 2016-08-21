@@ -1,15 +1,12 @@
 <?php
 
-$params = require(__DIR__ . '/params.php');
-
 $config = [
-    'id' => 'basic',
+    'id' => '[id]',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
         'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '7h4CSRBVWZiThul50Bwchz0NncwNUuP7',
+            'cookieValidationKey' => '[cookieValidationKey]',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -47,7 +44,7 @@ $config = [
         ],
         */
     ],
-    'params' => $params,
+    'params' => require(__DIR__ . '/params.php');
 ];
 
 if (YII_ENV_DEV) {
