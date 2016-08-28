@@ -25,12 +25,10 @@ NF2Asset::register($this);
 <?php $this->beginBody() ?>
 
     <div class="wrapper">
-          <div class="abs-center wd-xl">
 
               <?= $content ?>
     
-          </div>
-       </div>
+    </div>
 
 <?php $this->endBody() ?>
 </body>

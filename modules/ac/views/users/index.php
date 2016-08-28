@@ -1,8 +1,20 @@
+<?php
+
+use yii\helpers\Html;
+use yii\grid\GridView;
+
+/* @var $this yii\web\View */
+/* @var $searchModel app\modules\ac\models\search\UserSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'Users';
+$this->params['breadcrumbs'][] = $this->title;
+?>
 
 <div class="content-wrapper">
   <div class="content-heading">
-    Ecommerce
-     <small>What to sell, what to sell?</small>
+    Users
+    <small>Who are these people?</small>
   </div>
   <div class="row">
     <div class="col-xs-12">

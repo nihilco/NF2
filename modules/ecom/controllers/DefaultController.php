@@ -3,6 +3,8 @@
 namespace app\modules\ecom\controllers;
 
 use yii\web\Controller;
+use yii\web\HttpException;
+use app\modules\ecom\components\stripe\exceptions\BaseException;
 
 /**
  * Default controller for the `ecom` module

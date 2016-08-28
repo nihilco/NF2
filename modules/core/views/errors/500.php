@@ -1,6 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 ?>
+<div class="abs-center wd-xl">
 <!-- START panel-->
              <div class="text-center mb-xl">
                 <div class="mb-lg">
@@ -27,3 +28,4 @@
                 <br>
                 <span>The NIHIL Corporation</span>
              </div>
+</div>

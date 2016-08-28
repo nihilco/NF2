@@ -65,18 +65,97 @@ NF2Asset::register($this);
                                                                 <em class="fa fa-search"></em>
                                                              </a>
                                                           </li>
-                                                          <li>
-                                                             <a href="#" data-alerts-open="">
-                                                                <em class="fa fa-bell"></em>
-                                                             </a>
-                                                          </li>
-                                                          <!-- START Offsidebar button-->
+<?php if(!\Yii::$app->user->isGuest) { ?>
+    <!-- START Alert menu-->
+                      <li class="dropdown dropdown-list">
+                         <a href="#" data-toggle="dropdown">
+                            <em class="fa fa-bell"></em>
+                            <div class="label label-danger">11</div>
+                         </a>
+                         <!-- START Dropdown menu-->
+                         <ul class="dropdown-menu animated flipInX">
+                            <li>
+                               <!-- START list group-->
+                               <div class="list-group">
+                                  <!-- list item-->
+                                  <a href="#" class="list-group-item">
+                                     <div class="media-box">
+                                        <div class="pull-left">
+                                           <em class="fa fa-twitter fa-2x text-info"></em>
+                                        </div>
+                                        <div class="media-box-body clearfix">
+                                           <p class="m0">New followers</p>
+                                           <p class="m0 text-muted">
+                                              <small>1 new follower</small>
+                                           </p>
+                                        </div>
+                                     </div>
+                                  </a>
+                                  <!-- list item-->
+                                  <a href="#" class="list-group-item">
+                                     <div class="media-box">
+                                        <div class="pull-left">
+                                           <em class="fa fa-envelope fa-2x text-warning"></em>
+                                        </div>
+                                        <div class="media-box-body clearfix">
+                                           <p class="m0">New e-mails</p>
+                                           <p class="m0 text-muted">
+                                              <small>You have 10 new emails</small>
+                                           </p>
+                                        </div>
+                                     </div>
+                                  </a>
+                                  <!-- list item-->
+                                  <a href="#" class="list-group-item">
+                                     <div class="media-box">
+                                        <div class="pull-left">
+                                           <em class="fa fa-tasks fa-2x text-success"></em>
+                                        </div>
+                                        <div class="media-box-body clearfix">
+                                           <p class="m0">Pending Tasks</p>
+                                           <p class="m0 text-muted">
+                                              <small>11 pending task</small>
+                                           </p>
+                                        </div>
+                                     </div>
+                                  </a>
+                                  <!-- last list item-->
+                                  <a href="#" class="list-group-item">
+                                     <small>More notifications</small>
+                                     <span class="label label-danger pull-right">14</span>
+                                  </a>
+                               </div>
+                               <!-- END list group-->
+                            </li>
+                         </ul>
+                         <!-- END Dropdown menu-->
+                      </li>
+                      <!-- END Alert menu-->
+<?php } ?>
+
+<?php
+    if (\Yii::$app->user->isGuest) {
+?>
+<li>
+                         <a href="/ac/users/signup">Signup</a>
+                      </li>
+                      <li>
+                         <a href="/ac/users/login">Login</a>
+                      </li>
+<?php
+    } else {
+?>
+
                                                           <li>
                                                              <a href="#" data-toggle-state="offsidebar-open" data-no-persist="true">
                                                                 <em class="fa fa-gear"></em>
                                                              </a>
                                                           </li>
-                                                          <!-- END Offsidebar menu-->
+
+<?php
+    }
+?>    
+
                                                        </ul>
                                                        <!-- END Right Navbar-->
                                                     </div>
@@ -180,8 +259,8 @@ NF2Asset::register($this);
                                                                    </a>
                                                                 </li>
                                                                 <li class=" ">
-                                                                   <a href="/ac/groups" title="Sub Menu">
-                                                                      <span>Groups</span>
+                                                                   <a href="/ac/sessions" title="Sub Menu">
+                                                                      <span>Sessions</span>
                                                                    </a>
                                                                 </li>
                                                              </ul>
@@ -213,7 +292,21 @@ NF2Asset::register($this);
                                                        <!-- Tab panes-->
                                                        <div class="tab-content">
                                                           <div id="app-settings" role="tabpanel" class="tab-pane fade in active">
-                                                             <h3 class="text-center text-thin">Tab 1</h3>
+
+<?php
+    if(!\Yii::$app->user->isGuest) {
+?>
+
+    <h3 class="text-center text-thin"><?php echo \Yii::$app->user->identity->nickname; ?></h3>
+
+<div class="p">
+            <a href="/ac/users/logout" class="btn btn-danger btn-block">Logout</a>
+</div>
+
+<?php
+    }
+?>
+        
                                                           </div>
                                                           <div id="app-chat" role="tabpanel" class="tab-pane fade">
                                                              <h3 class="text-center text-thin">Tab 2</h3>
