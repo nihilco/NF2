@@ -50,6 +50,40 @@ class SignupForm extends Model
         $user->nickname = $this->nickname;
         $user->setPassword($this->password);
         $user->stripe_customer_id = $customer->id;
-        return $user->save() ? $user : null;
+
+        if(!$user->save()) {
+            return null;
+        }
+
+        // the following three lines were added:
+        $auth = \Yii::$app->authManager;
+        $userRole = $auth->getRole('User');
+        $auth->assign($userRole, $user->getId());
+        $uidRole = $auth->createRole('User' . $user->getId());
+        $uidRole->description = "Role for " . $this->email . ".";
+        $auth->add($uidRole);
+        $auth->assign($uidRole, $user->getId());
+
+        // Send email
+        $this->sendEmail();
+        
+        return $user;
     }
+
+    public function sendEmail()
+    {
+        return \Yii::$app->mail->compose([
+            'html' => '@app/modules/ac/views/emails/signup/html',
+            'text' => '@app/modules/ac/views/emails/signup/text'],
+        [
+            'email' => $this->email,
+            'nickname' => $this->nickname,
+            'birthday' => $this->birthday
+        ])
+                ->setFrom(['no-reply@nihil.co' => 'The NIHIL Corporation'])
+                ->setTo([$this->email => $this->nickname])
+                ->setSubject('Welcome to the NIHIL Framework!')
+                ->send();
+    }
+    
 }

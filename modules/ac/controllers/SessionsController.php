@@ -26,9 +26,49 @@ class SessionsController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['index'],
+                        'roles' => ['ac.sessions.index'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['view'],
+                        'roles' => ['ac.sessions.view'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['create'],
+                        'roles' => ['ac.sessions.create'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['update'],
+                        'roles' => ['ac.sessions.update'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['delete'],
+                        'roles' => ['ac.sessions.delete'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['details'],
+                        'roles' => ['ac.sessions.details'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['list'],
+                        'roles' => ['ac.sessions.list'],
+                    ],
+                ],
+            ],
         ];
     }
-
+    
     /**
      * Lists all Session models.
      * @return mixed

@@ -10,6 +10,23 @@ use yii\web\Controller;
 class DefaultController extends Controller
 {
     public $layout = '@app/modules/core/views/layouts/admin';
+
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['index'],
+                        'roles' => ['support.default.index'],
+                    ],
+                ],
+            ],
+        ];
+    }
+    
     /**
      * Renders the index view for the module
      * @return string

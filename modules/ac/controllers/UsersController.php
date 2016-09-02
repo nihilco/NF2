@@ -32,6 +32,71 @@ class UsersController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['index'],
+                        'roles' => ['ac.users.index'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['view'],
+                        'roles' => ['ac.users.view'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['details'],
+                        'roles' => ['ac.users.details'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['create'],
+                        'roles' => ['ac.users.create'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['update'],
+                        'roles' => ['ac.users.update'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['delete'],
+                        'roles' => ['ac.users.delete'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['list'],
+                        'roles' => ['ac.users.list'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['login'],
+                        'roles' => ['ac.users.login'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['logout'],
+                        'roles' => ['ac.users.logout'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['signup'],
+                        'roles' => ['ac.users.signup'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['forgotPassword'],
+                        'roles' => ['ac.users.forgot-password'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['resetPassword'],
+                        'roles' => ['ac.users.reset-password'],
+                    ],
+                ],
+            ],
         ];
     }
 

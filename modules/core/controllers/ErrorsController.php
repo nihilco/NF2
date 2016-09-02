@@ -11,11 +11,27 @@ class ErrorsController extends \yii\web\Controller
 {
     public $layout = 'blank';
 
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['error'],
+                        'roles' => ['core.errors.error'],
+                    ],
+                ],
+            ],
+        ];
+    }
+
     public function actionError()
     {
         if (($exception = Yii::$app->getErrorHandler()->exception) === null) {
             // action has been invoked not from error handler, but by direct route, so we display '404 Not Found'
-            $exception = new HttpException(404, 'Page not found.');
+            $exception = new \yii\web\HttpException(404, 'Page not found.');
         }
 
         if ($exception instanceof HttpException) {

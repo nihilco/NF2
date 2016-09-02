@@ -11,6 +11,22 @@ use app\modules\ecom\components\stripe\exceptions\BaseException;
  */
 class DefaultController extends Controller
 {
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['index'],
+                        'roles' => ['ecom.default.index'],
+                    ],
+                ],
+            ],
+        ];
+    }
+
     /**
      * Renders the index view for the module
      * @return string

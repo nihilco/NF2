@@ -198,7 +198,7 @@ NF2Asset::register($this);
                                                                 <li class="sidebar-subnav-header">Menu</li>
                                                                 <li class=" ">
                                                                    <a href="/pa/email" title="Sub Menu">
-                                                                      <span><i class="fa fa-inbox"></i> Email</span>
+                                                                      <span>Email</span>
                                                                    </a>
                                                                 </li>
                                                                 <li class=" ">
@@ -230,6 +230,40 @@ NF2Asset::register($this);
                                                                       <span>Pages</span>
                                                                    </a>
                                                                 </li>
+                                                                <li class=" ">
+                                                                   <a href="/cms/posts" title="Sub Menu">
+                                                                      <span>Posts</span>
+                                                                   </a>
+                                                                </li>
+                                                                <li class=" ">
+                                                                   <a href="/cms/tutorials" title="Sub Menu">
+                                                                      <span>Tutorials</span>
+                                                                   </a>
+                                                                </li>
+                                                             </ul>
+                                                          </li>
+                                                          <li class=" ">
+                                                             <a href="#ecom-nav" title="Menu" data-toggle="collapse">
+                                                                <em class="fa fa-shopping-cart"></em>
+                                                                <span>eCommerce</span>
+                                                             </a>
+                                                             <ul id="ecom-nav" class="nav sidebar-subnav collapse">
+                                                                <li class="sidebar-subnav-header">Menu</li>
+                                                                <li class=" ">
+                                                                   <a href="/ecom/accounts" title="Sub Menu">
+                                                                      <span>Accounts</span>
+                                                                   </a>
+                                                                </li>
+                                                                <li class=" ">
+                                                                   <a href="/ecom/invoices" title="Sub Menu">
+                                                                      <span>Invoices</span>
+                                                                   </a>
+                                                                </li>
+                                                                <li class=" ">
+                                                                   <a href="/ecom/orders" title="Sub Menu">
+                                                                      <span>Orders</span>
+                                                                   </a>
+                                                                </li>
                                                              </ul>
                                                           </li>
                                                           <li class=" ">
@@ -240,8 +274,8 @@ NF2Asset::register($this);
                                                              <ul id="support-nav" class="nav sidebar-subnav collapse">
                                                                 <li class="sidebar-subnav-header">Menu</li>
                                                                 <li class=" ">
-                                                                   <a href="/support/issues" title="Sub Menu">
-                                                                      <span>Issues</span>
+                                                                   <a href="/support/tickets" title="Sub Menu">
+                                                                      <span>Tickets</span>
                                                                    </a>
                                                                 </li>
                                                              </ul>
@@ -264,6 +298,12 @@ NF2Asset::register($this);
                                                                    </a>
                                                                 </li>
                                                              </ul>
+                                                          </li>
+                                                          <li class="">
+                                                             <a href="/core/default/settings" title="settings">
+                                                                <em class="fa fa-gears"></em>
+                                                                <span >Settings</span>
+                                                             </a>
                                                           </li>
                                                        </ul>
                                                        <!-- END sidebar nav-->
