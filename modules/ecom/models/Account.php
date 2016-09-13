@@ -3,6 +3,7 @@
 namespace app\modules\ecom\models;
 
 use Yii;
+use app\modules\ac\models\User;
 
 /**
  * This is the model class for table "ecom_accounts".
@@ -16,11 +17,12 @@ use Yii;
  * @property string $date_created
  * @property string $date_updated
  * @property string $timestamp
+ *
+ * @property User $user
+ * @property AccountStatus $accountStatus
  */
 class Account extends \yii\db\ActiveRecord
 {
-    private $_key = 'rSJDZ5esCu8QAVykp5LpKyw8QNsW8oI0rjr0DLRFynhi5gGlvqOnlhS5vsMQlB9u';
-
     /**
      * @inheritdoc
      */
@@ -35,10 +37,12 @@ class Account extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['account_status_id', 'user_id', 'stripe_account_id', 'secret_key', 'publishable_key'], 'required'],
+            [['account_status_id', 'user_id', 'stripe_account_id', 'secret_key', 'publishable_key', 'date_created'], 'required'],
             [['account_status_id', 'user_id'], 'integer'],
             [['date_created', 'date_updated', 'timestamp'], 'safe'],
             [['stripe_account_id', 'secret_key', 'publishable_key'], 'string', 'max' => 128],
+            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
+            [['account_status_id'], 'exist', 'skipOnError' => true, 'targetClass' => AccountStatus::className(), 'targetAttribute' => ['account_status_id' => 'id']],
         ];
     }
 
@@ -49,33 +53,30 @@ class Account extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'account_status_id' => 'Account Status ID',
             'user_id' => 'User ID',
             'stripe_account_id' => 'Stripe Account ID',
+            'secret_key' => 'Secret Key',
+            'publishable_key' => 'Publishable Key',
             'date_created' => 'Date Created',
             'date_updated' => 'Date Updated',
             'timestamp' => 'Timestamp',
         ];
     }
 
-    public function beforeSave($insert)
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUser()
     {
-        if (parent::beforeSave($insert)) {
-            if ($this->isNewRecord) {
-                //$this->encryptKey();
-                $this->date_created = date("Y-m-d H:i:s");
-            }
-            return true;
-        }
-        return false;
+        return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
 
-    public function encryptKey()
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getAccountStatus()
     {
-        $this->secret_key = utf8_encode(\Yii::$app->security->encryptByKey($this->secret_key, $this->_key));
-    }
-
-        public function decryptKey()
-    {
-        $this->secret_key = \Yii::$app->security->encryptByKey(utf8_decode($this->secret_key), $this->_key);
+        return $this->hasOne(AccountStatus::className(), ['id' => 'account_status_id']);
     }
 }

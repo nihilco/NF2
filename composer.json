@@ -19,7 +19,8 @@
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
 	"stripe/stripe-php": "*",
-	"fortawesome/font-awesome": "*"
+	"fortawesome/font-awesome": "*",
+	"bower-asset/jquery.payment": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

@@ -1,7 +1,6 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\ecom\models\Account */
@@ -13,14 +12,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="content-wrapper">
   <div class="content-heading">
-    View Account
-     <small>New seller?</small>
+     <?= Html::encode($this->title) ?>
+     <small>catchphrase</small>
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <div class="support-default-index">
-
-
+      <div class="account-view">
 
       </div>
     </div>

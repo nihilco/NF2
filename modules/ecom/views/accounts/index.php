@@ -1,12 +1,23 @@
+<?php
+
+use yii\helpers\Html;
+
+/* @var $this yii\web\View */
+/* @var $searchModel app\modules\ecom\models\search\AccountSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'Accounts';
+$this->params['breadcrumbs'][] = $this->title;
+?>
 
 <div class="content-wrapper">
   <div class="content-heading">
-    Accounts
-     <small>Who is selling today?</small>
+     <?= Html::encode($this->title) ?>
+     <small>catchphrase</small>
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <div class="support-default-index">
+      <div class="account-index">
         <h1><?= $this->context->action->uniqueId ?></h1>
         <p>
           This is the view content for action "<?= $this->context->action->id ?>".

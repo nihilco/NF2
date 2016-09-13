@@ -37,6 +37,7 @@ class Stripe extends \yii\base\Component {
     public $balance;
     public $customer;
     public $account;
+    public $charge;
     
     /**
      * @see Init extension default
@@ -61,6 +62,7 @@ class Stripe extends \yii\base\Component {
         $this->balance = new Balance();
         $this->customer = new Customer();
         $this->account = new Account();
+        $this->charge = new Charge();
         
         parent::init();
     }
@@ -103,5 +105,15 @@ class Stripe extends \yii\base\Component {
             throw $e;
         }
 
+    }
+
+    public function getPublishableKey()
+    {
+        return $this->{$this->mode}['publishableKey'];
+    }
+
+    public function getSecretKey()
+    {
+        return $this->{$this->mode}['secretKey'];
     }
 }

@@ -17,13 +17,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
+    <?= $form->field($model, 'account_status_id') ?>
+
     <?= $form->field($model, 'user_id') ?>
 
     <?= $form->field($model, 'stripe_account_id') ?>
 
-    <?= $form->field($model, 'date_created') ?>
+    <?= $form->field($model, 'secret_key') ?>
 
-    <?= $form->field($model, 'date_updated') ?>
+    <?php // echo $form->field($model, 'publishable_key') ?>
+
+    <?php // echo $form->field($model, 'date_created') ?>
+
+    <?php // echo $form->field($model, 'date_updated') ?>
 
     <?php // echo $form->field($model, 'timestamp') ?>
 

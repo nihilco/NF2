@@ -369,8 +369,8 @@ NF2Asset::register($this);
 <li><a href="/contact">Contact</a></li>
 </ul>
       </footer>
-   </div>
-
+   </div>                                             
+                                             
 <?php $this->endBody() ?>
 </body>
 </html>

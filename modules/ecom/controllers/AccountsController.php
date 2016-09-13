@@ -8,7 +8,6 @@ use app\modules\ecom\models\search\AccountSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use app\modules\ecom\models\forms\CreateAccountForm;
 
 /**
  * AccountsController implements the CRUD actions for Account model.
@@ -21,19 +20,18 @@ class AccountsController extends Controller
     public function behaviors()
     {
         return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-                        'access' => [
+            'access' => [
                 'class' => \yii\filters\AccessControl::className(),
                 'rules' => [
                     [
                         'allow' => true,
                         'actions' => ['index'],
                         'roles' => ['ecom.accounts.index'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['create'],
+                        'roles' => ['ecom.accounts.create'],
                     ],
                     [
                         'allow' => true,
@@ -44,11 +42,6 @@ class AccountsController extends Controller
                         'allow' => true,
                         'actions' => ['details'],
                         'roles' => ['ecom.accounts.details'],
-                    ],
-                    [
-                        'allow' => true,
-                        'actions' => ['create'],
-                        'roles' => ['ecom.accounts.create'],
                     ],
                     [
                         'allow' => true,
@@ -67,28 +60,22 @@ class AccountsController extends Controller
                     ],
                 ],
             ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
         ];
     }
 
     /**
-     * Lists all Account models.
+     * Index action
      * @return mixed
      */
     public function actionIndex()
     {
         return $this->render('index');
-    }
-
-    /**
-     * Displays a single Account model.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
     }
 
     /**
@@ -104,16 +91,28 @@ class AccountsController extends Controller
     }
 
     /**
+     * Displays a single Account model.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionView($id)
+    {
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+
+    /**
      * Creates a new Account model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new CreateAccountForm();
+        $model = new Account();
 
-        if ($model->load(Yii::$app->request->post()) && $model->create()) {
-            return $this->redirect(['view', 'id' => $model->getAccountId()]);
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -168,6 +167,7 @@ class AccountsController extends Controller
         ]);
     }
 
+    
     /**
      * Finds the Account model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

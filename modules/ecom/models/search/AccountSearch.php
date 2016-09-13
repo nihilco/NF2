@@ -67,9 +67,9 @@ class AccountSearch extends Account
             'timestamp' => $this->timestamp,
         ]);
 
-        $query->andFilterWhere(['like', 'stripe_account_id', $this->stripe_account_id]);
-        $query->andFilterWhere(['like', 'secret_key', $this->secret_key]);
-        $query->andFilterWhere(['like', 'publishable_key', $this->publishable_key]);
+        $query->andFilterWhere(['like', 'stripe_account_id', $this->stripe_account_id])
+            ->andFilterWhere(['like', 'secret_key', $this->secret_key])
+            ->andFilterWhere(['like', 'publishable_key', $this->publishable_key]);
 
         return $dataProvider;
     }

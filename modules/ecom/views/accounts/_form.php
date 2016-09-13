@@ -12,9 +12,15 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?= $form->field($model, 'account_status_id')->textInput() ?>
+
     <?= $form->field($model, 'user_id')->textInput() ?>
 
     <?= $form->field($model, 'stripe_account_id')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'secret_key')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'publishable_key')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'date_created')->textInput() ?>
 

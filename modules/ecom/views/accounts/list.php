@@ -34,10 +34,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'user_id',
             'stripe_account_id',
             'date_created',
-            'date_updated',
+            //'date_updated',
             // 'timestamp',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'app\library\grid\ActionColumn'],
         ],
     ]); ?>
 
