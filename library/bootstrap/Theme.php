@@ -43,6 +43,15 @@ class Theme implements BootstrapInterface {
                     ]
                 ]
             );
+
+            Yii::$app->set('urlManager',
+                [
+                    'class' => 'yii\web\UrlManager',
+                    'enablePrettyUrl' => true,
+                    'showScriptName' => false,
+                    'rules' => require(__DIR__ . '/../../themes/' . $themeSlug . '/config/urls.php'),
+                ]
+            );
         }
 
     }
