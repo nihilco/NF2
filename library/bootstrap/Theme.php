@@ -25,12 +25,22 @@ class Theme implements BootstrapInterface {
 
     public function bootstrap($app) {
 
+        $themeSlug = null;
+        
         // Get settings from database
-        $sql = $this->db->createCommand("SELECT slug FROM core_themes WHERE `active` = 1 LIMIT 1");
-        $result = $sql->queryOne();
+        if (defined('NIHIL_THEME')) {
+          $themeSlug = constant('NIHIL_THEME');
+        } else {
 
-        if ($result) {
+          $sql = $this->db->createCommand("SELECT slug FROM core_themes WHERE `active` = 1 LIMIT 1");
+          $result = $sql->queryOne();
+
+          if ($result) {
             $themeSlug = $result['slug'];
+          }
+        }
+
+        if ($themeSlug) {
             Yii::$app->set('view',
                 [
                     'class' => 'yii\web\View',
@@ -52,6 +62,7 @@ class Theme implements BootstrapInterface {
                     'rules' => require(__DIR__ . '/../../themes/' . $themeSlug . '/config/urls.php'),
                 ]
             );
+
         }
 
     }

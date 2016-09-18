@@ -43,9 +43,7 @@ TatetownshipAsset::register($this);
           <ul class="dropdown-menu">
             <li><a href="/government/board-of-trustees">Board of Trustees</a></li>
             <li><a href="/government/meeting-minutes">Meetinging Minutes</a></li>
-            <li><a href="http://www.clermontcountyohio.gov" target="_blank">County Government</a></li>                                                                                             <li><a href="http://www.ohio.gov/" target="_blank">State Government</a></li>
-            <li><a href="https://ohioauditor.gov/open/publicrecords.html" target="_blank">Open OH Records</a></li>
-            <li><a href="https://www.usa.gov/" target="_blank">US Government</a></li>
+            <li><a href="/government/jobs-and-employment">Jobs & Employment</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -99,23 +97,18 @@ TatetownshipAsset::register($this);
           <li>
             <a href="/calendar">Calendar</a>
           </li>
-          <li>
-            <a href="/jobs">Jobs</a>
-          </li>
         </ul>
       </div>
       <div class="col-sm-3 menu">
         <h3>Government</h3>
         <ul>
           <li>
-            <a href="/government/board=of=trustees">Board of Trustees</a>
+            <a href="/government/board-of-trustees">Board of Trustees</a>
           </li>
           <li>
             <a href="/government/meeting-minutes">Meeting Minutes</a>
           </li>
-    <li><a href="http://www.clermontcountyohio.gov" target="_blank">County Government</a></li>                                                                                             <li><a href="http://www.ohio.gov/" target="_blank">State Government</a></li>
-    <li><a href="https://ohioauditor.gov/open/publicrecords.html" target="_blank">Open OH Records</a></li>
-            <li><a href="https://www.usa.gov/" target="_blank">US Government</a></li>
+          <li><a href="/government/jobs-and-employemnt">Jobs & Employment</a></li>
         </ul>
       </div>
       <div class="col-sm-3 menu">
@@ -131,7 +124,7 @@ TatetownshipAsset::register($this);
             <a href="/departments/fire-and-ems">Fire & Emergency Services</a>
           </li>
           <li>
-            <a href="/departments/deputy-and-sherrif">Deputy & Sheriff</a>
+            <a href="/departments/deputy-and-sheriff">Deputy & Sheriff</a>
           </li>
         </ul>
       </div>

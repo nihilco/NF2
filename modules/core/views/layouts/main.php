@@ -63,7 +63,7 @@ NF2Asset::register($this);
                          </ul>
                       </li>
                       <li><a href="/pricing">Pricing</a>
-                      <li><a href="/contact">Contact</a>
+                      <li><a href="/core/default/contact">Contact</a>
                       </li>
                    </ul>
                    <!-- END Left navbar-->
@@ -241,7 +241,7 @@ NF2Asset::register($this);
                                                                                                                        <span>Copyright &copy; 2010-2016 The NIHIL Corporation.  All rights reserved.</span>
 <ul class="pull-right list-inline">
                                                                                                                                                   <li><a href="/core/legal">Legal</a></li>
-                                                                                                                                                  <li><a href="/contact">Contact</a></li>
+                                                                                                                                                  <li><a href="/core/default/contact">Contact</a></li>
                                                                                                                                                   </ul>
       </footer>
    </div>

@@ -8,7 +8,7 @@
     Clermont County, Ohio
     </h1>
     <p class="sub-text animated fadeInDown">
-    The next township meeting will be held on 7:00pm, July 15th, 2016 at the Town Hall.
+    Special Trustee Meeting will be held on 3:00pm, September 27th, 2016 at the Bethel-Tate Fire Department to discuss finances.
     </p>
     <div class="cta animated fadeInDown">
     <a href="/news" class="button-outline">Read More</a>
