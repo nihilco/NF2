@@ -135,16 +135,16 @@
         },
         {
             "name": "bower-asset/jquery.payment",
-            "version": "v2.0.0",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/jquery.payment.git",
-                "reference": "c5937df1c55331dfa02e3f397676371a719284cc"
+                "reference": "f0e303b3769e9bbbc22ca2eb4a3e97f64745ab33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/jquery.payment/zipball/c5937df1c55331dfa02e3f397676371a719284cc",
-                "reference": "c5937df1c55331dfa02e3f397676371a719284cc",
+                "url": "https://api.github.com/repos/stripe/jquery.payment/zipball/f0e303b3769e9bbbc22ca2eb4a3e97f64745ab33",
+                "reference": "f0e303b3769e9bbbc22ca2eb4a3e97f64745ab33",
                 "shasum": ""
             },
             "require": {
@@ -371,16 +371,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v3.23.0",
+            "version": "v4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "c702a2ed92f4b39603c4a796492d87bcc16c819c"
+                "reference": "1b9905dc2cdf870e0f9ee9c82de1f7e4f5b972a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/c702a2ed92f4b39603c4a796492d87bcc16c819c",
-                "reference": "c702a2ed92f4b39603c4a796492d87bcc16c819c",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/1b9905dc2cdf870e0f9ee9c82de1f7e4f5b972a1",
+                "reference": "1b9905dc2cdf870e0f9ee9c82de1f7e4f5b972a1",
                 "shasum": ""
             },
             "require": {
@@ -422,7 +422,7 @@
                 "payment processing",
                 "stripe"
             ],
-            "time": "2016-09-15 18:16:59"
+            "time": "2016-09-28 17:53:54"
         },
         {
             "name": "swiftmailer/swiftmailer",
