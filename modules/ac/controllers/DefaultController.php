@@ -47,11 +47,11 @@ class DefaultController extends Controller
                 'email' => 'mclemmer@gmail.com',
                 'organization' => 'The NIHIL Corporation',
             ],
-            2 => [
-                'name' => 'Ann K. Taylor',
-                'email' => 'ataylor@baylorschool.org',
-                'organization' => 'Baylor School',
-            ],
+            //2 => [
+            //    'name' => 'Ann K. Taylor',
+            //    'email' => 'ataylor@baylorschool.org',
+            //    'organization' => 'Baylor School',
+            //],
         ];
 
         $c = 0;
@@ -66,9 +66,9 @@ class DefaultController extends Controller
                     'name' => $rep['name'],
                     'organization' => $rep['organization'],
                 ])
-                ->setFrom(['no-reply@coasttocoastcollegefair.com' => 'Coast to Coast College Fair'])
+                ->setFrom(['no-reply@coasttocoastcollegefair.com' => 'Coast-to-Coast College Fair'])
                 ->setTo([$rep['email'] => $rep['name']])
-                ->setSubject('Invitation to Coast to Coast College Fair')
+                ->setSubject('Invitation to Chattanooga\'s Coast-to-Coast College Fair')
                 ->send();
 
             $c++;
