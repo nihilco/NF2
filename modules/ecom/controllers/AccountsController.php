@@ -33,6 +33,7 @@ class AccountsController extends Controller
                         'actions' => ['create'],
                         'roles' => ['ecom.accounts.create'],
                     ],
+                    
                     [
                         'allow' => true,
                         'actions' => ['view'],

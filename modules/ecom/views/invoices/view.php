@@ -25,9 +25,11 @@ function escapeJavaScriptText($string)
 <!-- Page content-->
              <div class="content-wrapper">
                 <h3>
+<?php if (\Yii::$app->user->can('ecom.invoices.create')) { ?>
                    <a href="/ecom/invoices/create" class="btn btn-primary pull-right">
                       <em class="fa fa-plus-circle fa-fw mr-sm"></em>New Invoice
                    </a>
+<?php } ?>
                    Invoice
                 </h3>
                 <div class="panel">
@@ -159,12 +161,50 @@ function escapeJavaScriptText($string)
                             </div>
                          </div>
                       </div>
+<?php if(count($model->payments) > 0) { ?>
+    <hr class="hidden-print">
+    <div class="row">
+         <div class="col-sm-12">
+         <h4>Payments</h4>
+                       <div class="table-responsive table-bordered mb-lg">
+                         <table class="table">
+                            <thead>
+                               <tr>
+                                  <th>Date</th>
+                                  <th>Reference Number</th>
+                                  <th>Payment Type</th>
+                                  <th>Amount</th>
+                               </tr>
+                            </thead>
+                            <tbody>
+    <?php
+      foreach($model->payments as $payment) {
+    ?>
+                               <tr>
+                                  <td><?= $payment->date_created ?></td>
+                                  <td><?= $payment->reference_number ?></td>
+                                  <td><?= $payment->paymentType->name ?></td>
+                                  <td>$<?= $payment->amount ?></td>
+                               </tr>
+                               <tr>
+                                 <td colspan="4"><?= $payment->notes ?></td>
+                               </tr>
+    <?php
+      }
+    ?>
+                            </tbody>
+                         </table>
+                      </div>
+         </div>
+    </div>
+<?php } ?>
                       <hr class="hidden-print">
                       <div class="clearfix">
                          <a href="/ecom/invoices/update?id=<?= $model->id ?>" class="btn btn-primary pull-left mr">Edit</a>
                          <button type="button" onclick="window.print();" class="btn btn-default pull-left mr">Print</button>
-  
-    <button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#payModal">Pay Invoice</button>    
+<?php if($model->total_paid != $model->total) { ?>  
+    <button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#payModal">Pay Invoice</button>
+<?php } ?>
                          <a href="/ecom/invoices/send" class="btn btn-default pull-right mr">Send</a>
     <!-- Button trigger modal -->
 

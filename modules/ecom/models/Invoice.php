@@ -126,7 +126,7 @@ class Invoice extends \yii\db\ActiveRecord
      */
     public function getInvoiceType()
     {
-        return $this->hasOne(InvoiceTypes::className(), ['id' => 'invoice_type_id']);
+        return $this->hasOne(InvoiceType::className(), ['id' => 'invoice_type_id']);
     }
 
     /**

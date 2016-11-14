@@ -81,7 +81,7 @@ class InvoiceSearch extends Invoice
         $query->andFilterWhere(['like', 'auth_key', $this->auth_key])
             ->andFilterWhere(['like', 'number', $this->number])
             ->andFilterWhere(['like', 'notes', $this->notes]);
-
+        
         return $dataProvider;
     }
 }

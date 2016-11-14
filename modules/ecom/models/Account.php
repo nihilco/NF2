@@ -16,7 +16,6 @@ use app\modules\ac\models\User;
  * @property string $publishable_key
  * @property string $date_created
  * @property string $date_updated
- * @property string $timestamp
  *
  * @property User $user
  * @property AccountStatus $accountStatus
@@ -37,9 +36,9 @@ class Account extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['account_status_id', 'user_id', 'stripe_account_id', 'secret_key', 'publishable_key', 'date_created'], 'required'],
+            [['account_status_id', 'user_id', 'stripe_account_id', 'secret_key', 'publishable_key'], 'required'],
             [['account_status_id', 'user_id'], 'integer'],
-            [['date_created', 'date_updated', 'timestamp'], 'safe'],
+            [['date_created', 'date_updated'], 'safe'],
             [['stripe_account_id', 'secret_key', 'publishable_key'], 'string', 'max' => 128],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
             [['account_status_id'], 'exist', 'skipOnError' => true, 'targetClass' => AccountStatus::className(), 'targetAttribute' => ['account_status_id' => 'id']],
@@ -60,10 +59,21 @@ class Account extends \yii\db\ActiveRecord
             'publishable_key' => 'Publishable Key',
             'date_created' => 'Date Created',
             'date_updated' => 'Date Updated',
-            'timestamp' => 'Timestamp',
         ];
     }
 
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+            if ($this->isNewRecord) {
+                $this->date_created = date("Y-m-d H:i:s");
+            }
+            $this->date_updated = date("Y-m-d H:i:s");
+            return true;
+        }
+        return false;
+    }
+    
     /**
      * @return \yii\db\ActiveQuery
      */

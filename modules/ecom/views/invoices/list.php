@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\ArrayHelper;
+use app\modules\ac\models\User;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\modules\ecom\models\search\InvoiceSearch */
@@ -32,9 +34,21 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             //'id',
-            'invoice_type_id',
-            'invoice_status_id',
-            'user_id',
+            //'invoice_type_id',
+            [
+                'label' => 'Type',
+                'attribute'=>'invoiceType.name',
+            ],
+            //'invoice_status_id',
+            [
+                'label' => 'Status',
+                'attribute'=>'invoiceStatus.name',
+            ],
+            //'user_id',
+            [
+                'label' => 'User',
+                'attribute'=>'user.email',
+            ],
             //'currency_id',
             // 'auth_key',
             'number',
