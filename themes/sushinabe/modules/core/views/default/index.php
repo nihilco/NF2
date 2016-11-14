@@ -12,46 +12,43 @@
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
 
       </ol>
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
-       <div class="item  height-of-slider">
-         <img src="/themes/sushinabe/img/slider image.jpg" alt="#" class="img-responsive" >
-         <div class="hero">
-            <hgroup>
-    <p>Every Tuesday, Wednesday, and Thursday
-    </p>
-    <h1> <strong><?= date("F") ?></strong> Dine-in Special</h1>
-               <h3> 50% Off Select Sushi Rolls</h3>
-            </hgroup>
-
-          </div>
-        </div>
 
         <div class="item height-of-slider active">
-     <img src="/themes/sushinabe/img/slider2.jpg" alt="#" class="img-responsive" >
-         <div class="hero">
-            <hgroup>
-
-
-    <p>Earn discounts and rewards with your membership everytime you dine with us</p>
-
-    <h1> <strong>Join</strong>
-    Our Chopsticks Club</h1>
-              <h3>What is your number?</h3>
-            </hgroup>
-
-          </div>
-        </div>
-
-        <div class="item height-of-slider">
        <img src="/themes/sushinabe/img/slider3.jpg" alt="#" class="img-responsive" >
           <div class="hero">
            <hgroup>
 
+            <p>Celebrate with all you can eat sushi.  Happy Holidays!</p>
+                <h1> <strong> Christmas</strong>  Sushi Buffet</h1>
+    <h3>December 20<sup>th</sup>, 21<sup>st</sup>, and 22<sup>nd</sup> of 2016</h3>
+            </hgroup>
 
+          </div>
+        </div>
+
+            <div class="item height-of-slider">
+       <img src="/themes/sushinabe/img/christmas-wine.jpg" alt="#" class="img-responsive" >
+          <div class="hero">
+           <hgroup>
+               <p>Sushi Nabe Presents</p>
+               <h1><strong>The Wine</strong>  Flights</h1>
+               <h3>A sampler of Pinot Noirs</h3>
+            </hgroup>
+
+          </div>
+        </div>
+
+            <div class="item height-of-slider">
+       <img src="/themes/sushinabe/img/holiday_table_final.jpg" alt="#" class="img-responsive" >
+          <div class="hero">
+           <hgroup>
 
             <p>Stop by the restaurant to purchase a giftcard for your special someone today.
     </p>
@@ -62,6 +59,29 @@
           </div>
         </div>
 
+        <div class="item height-of-slider">
+         <img src="/themes/sushinabe/img/slider_image.jpg" alt="#" class="img-responsive" >
+         <div class="hero">
+            <hgroup>
+               <p>Every Tuesday, Wednesday, and Thursday</p>
+               <h1> <strong><?= date("F") ?></strong> Dine-in Special</h1>
+               <h3> 50% Off Select Sushi Rolls</h3>
+            </hgroup>
+
+          </div>
+        </div>
+    
+        <div class="item height-of-slider">
+         <img src="/themes/sushinabe/img/slider2.jpg" alt="#" class="img-responsive" >
+         <div class="hero">
+            <hgroup>
+              <p>Earn discounts and rewards with your membership everytime you dine with us</p>
+              <h1> <strong>Join</strong>Our Chopsticks Club</h1>
+              <h3>What is your number?</h3>
+            </hgroup>
+
+          </div>
+        </div>
 
       </div>
 
@@ -86,7 +106,7 @@
       <div class="col-md-6 col-xs-12 col-lg-4 col-sm-6 text-center sub-contact-one ">
        <img src="/themes/sushinabe/img/header - phone.png"  alt="" class="img-responsive"/>
          <div  class="sub-contact-two" ><p>+1.423.634.0171</p>
-        <p style="font-family: 'open_sansbold' !important;">eathappy@sushinabechattanooga.com</p></div></div>
+        <p style="font-family: 'open_sansbold' !important;"><a href="mailto:eathappy@sushinabe.com">eathappy@sushinabe.com</a></p></div></div>
 
        <div class="col-md-6 col-xs-12 col-lg-4 col-sm-6 text-center sub-contact-one ">
         <img src="/themes/sushinabe/img/header - location.png"  alt="" class="img-responsive"/>
@@ -96,8 +116,36 @@
       </div>
         <div class="col-md-6 col-xs-12 col-lg-4 col-sm-6 text-center sub-contact-one ">
         <img src="/themes/sushinabe/img/header - time.png"  alt="" class="img-responsive"/>
-    <div class="sub-contact-two" ><p>Tue - Sun 11:30am - 9:30pm</p>
-                                                                <p style="font-family: 'open_sansbold' !important;">Monday Closed</p></div>
+    <div class="sub-contact-two" >
+
+<?php
+    $days = array(
+        'Sunday' => array('status' => 'Open', 'hours' => '12:00pm-9:00pm'),
+        'Monday' => array('status' => 'Closed', 'hours' => NULL),
+        //'Monday' => array('status' => 'Open', 'hours' => '4:00pm-9:00pm'),
+        'Tuesday' => array('status' => 'Open', 'hours' => '11:30am-2:30pm and 5:00pm-9:30pm'),
+        'Wednesday' => array('status' => 'Open', 'hours' => '11:30am-2:30pm and 5:00pm-9:30pm'),
+        'Thursday' => array('status' => 'Open', 'hours' => '11:30am-2:30pm and 5:00pm-9:30pm'),
+        'Friday' => array('status' => 'Open', 'hours' => '11:30am-2:30pm and 5:00pm-9:30pm'),
+        'Saturday' => array('status' => 'Open', 'hours' => '12:00pm-10:00pm'),
+        //'Sunday' => array('status' => 'Closed', 'hours' => NULL),
+        //'Monday' => array('status' => 'Closed', 'hours' => NULL),
+        //'Tuesday' => array('status' => 'Closed', 'hours' => NULL),
+        //'Wednesday' => array('status' => 'Closed', 'hours' => NULL),
+        //'Thursday' => array('status' => 'Closed', 'hours' => NULL),
+        //'Friday' => array('status' => 'Closed', 'hours' => NULL),
+        //'Saturday' => array('status' => 'Closed', 'hours' => NULL),
+    );
+$today = date("l");
+if($days[$today]['status'] == 'Closed') {
+    echo '<p style="font-family: \'open_sansbold\' !important;">Closed Today</p>';
+}else{
+    echo '<p style="font-family: \'open_sansbold\' !important;">Open Today</p>';
+    echo '<p>' . $days[$today]['hours'] . '</p>';
+}
+
+      ?>
+    </div>
 
                                                                </div>
                                                                <!--<div class="col-md-6 col-xs-12 col-lg-3 col-sm-6 text-center margin-23">
@@ -135,7 +183,7 @@
                                                              <div class="row">
 
                                                              <div class="col-md-6 col-xs-12 sub-gallery">
-                                                               <img src="/themes/sushinabe/img/gallery1.jpg" class="img-responsive" alt=""/> </div>
+                                                               <img src="/themes/sushinabe/img/tomato_with_a_hat.jpg" class="img-responsive" alt=""/> </div>
                                                              <div class="col-md-6 col-xs-12">
                                                              <div class="col-md-6 col-xs-6">
                                                                <img src="/themes/sushinabe/img/gallery2.jpg" class="img-responsive" alt=""/> </div>
@@ -150,19 +198,57 @@
 
                                                              </section>
 
+                                                                   <!--||||||||||||||||||||ABOUT US |||||||||||||||||-->
+                                                             <section id="menu">
+                                                             <div class="container">
+                                                             <div class="row">
+
+                                                             <div class="col-sm-12 for-center">
+
+                                             <div class="row">
+                                               <div class="col-sm-10 col-sm-offset-1">
+                                                                 <h1>Menu</h1>
+                                               </div>
+                                             </div>
+                                             <div class="row">
+                                               <div class="col-sm-10 col-sm-offset-1">
+
+<div class="row">
+                                               <div class="col-sm-3">
+                                                 <a href="#" class="btn btn-block">Lunch</a>
+                                               </div>
+                                               <div class="col-sm-3">
+                                                 <a href="#" class="btn btn-block">Dinner</a>
+                                               </div>
+                                               <div class="col-sm-3">
+                                                 <a href="#" class="btn btn-block">Sushi</a>
+                                               </div>
+                                               <div class="col-sm-3">
+                                                 <a href="#" class="btn btn-block">Specials</a>
+                                               </div>
+                                             </div>
+
+    
+                                               </div>
+                                             </div>
+    
+                                                             </div>
+
+                                                             </section>
+
                                                              <div class="FooterTop" id="reservations">
                                                              <div class="container">
                                                              <div class="row">
-                                                             <div class="col-md-7">
+                                                             <div class="col-sm-12">
                                                              <h3><span>Dining</span> Reservations</h3>
                                                              <div class="GMap">
 
-                                                                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3265.7957317600385!2d-85.31036558554146!3d35.06184577129947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88605e5c28a8607b%3A0xbad272848d26bf68!2sSushi+Nabe!5e0!3m2!1sen!2sin!4v1466595503734" width="600" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3265.7957317600385!2d-85.31036558554146!3d35.06184577129947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88605e5c28a8607b%3A0xbad272848d26bf68!2sSushi+Nabe!5e0!3m2!1sen!2sin!4v1466595503734" width="600" height="350" frameborder="0" style="border:0;" allowfullscreen></iframe>
                                                                              </div>
                                                                          </div>
 
 
-                                                                         <div class="col-md-5">
+                                                                         <!--<div class="col-md-5">
                                                              <h3>&nbsp;</h3
                                                              <div class="ConForm">
 
@@ -171,7 +257,7 @@ Online reservations coming soon.
 
                                                              
                                                                              </div>
-                                                                         </div>
+                                                                         </div>-->
                                                                      </div>
                                                                  </div>
                                                              </div>
