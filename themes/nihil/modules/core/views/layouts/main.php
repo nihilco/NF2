@@ -77,8 +77,11 @@ NihilAsset::register($this);
                 <div class="row">
                     <div class="footer-col col-md-4">
                         <h3>Location</h3>
-                        <p>3481 Melrose Place
-                            <br>Beverly Hills, CA 90210</p>
+                        <ul class="list-unstyled">
+    <li>Atlanta, GA</li>
+    <li>Chattanooga, TN</li>
+    <li>Lexington, KY</li>
+    </ul>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
@@ -101,8 +104,8 @@ NihilAsset::register($this);
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                        <h3>About NIHIL</h3>
+    <p>The NIHIL Corporation is a software engineering firm specializing in web, mobile, and industrial solutions.</p>
                     </div>
                 </div>
             </div>
@@ -110,8 +113,14 @@ NihilAsset::register($this);
         <div class="footer-below">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Your Website 2016
+                    <div class="col-sm-6">
+    Copyright &copy; 2009-<?= date("Y") ?> The NIHIL Corporation.  All rights reserved.
+                    </div>
+                    <div class="col-sm-6">
+                       <ul class="list-inline pull-right">
+                         <li><a href="#">Privacy</a></li>
+                         <li><a href="#">Terms</a></li>
+                       </ul>
                     </div>
                 </div>
             </div>
