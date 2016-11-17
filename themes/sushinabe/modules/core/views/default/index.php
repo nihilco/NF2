@@ -155,8 +155,10 @@ if($days[$today]['status'] == 'Closed') {
                                                                </div>
 
                                                                </section>
-                                                               <!--||||||||||||||||||||ABOUT US |||||||||||||||||-->
-                                                             <section id="about">
+
+
+    <!--||||||||||||||||||||ABOUT US |||||||||||||||||-->
+    <!--                                                         <section id="about">
                                                              <div class="container">
                                                              <div class="row">
 
@@ -175,30 +177,10 @@ if($days[$today]['status'] == 'Closed') {
 
                                                              </div>
                                                              </div>
-                                                             </section>
+                                                             </section>-->
 
-                                                             <!--||||||||||||||||||||||||gallery section ||||||||||||||||-->
-                                                             <section id="gallery">
-                                                             <div class="container">
-                                                             <div class="row">
 
-                                                             <div class="col-md-6 col-xs-12 sub-gallery">
-                                                               <img src="/themes/sushinabe/img/tomato_with_a_hat.jpg" class="img-responsive" alt=""/> </div>
-                                                             <div class="col-md-6 col-xs-12">
-                                                             <div class="col-md-6 col-xs-6">
-                                                               <img src="/themes/sushinabe/img/gallery2.jpg" class="img-responsive" alt=""/> </div>
-                                                             <div class="col-md-6 col-xs-6">
-                                                               <img src="/themes/sushinabe/img/gallery3.jpg" class="img-responsive" alt=""/> </div>
-                                                             <div class="col-md-12 padding-30">
-                                                             <img src="/themes/sushinabe/img/gallery4.jpg" class="img-responsive" alt=""/> </div>
-                                                             </div>
-
-                                                             </div>
-                                                             </div>
-
-                                                             </section>
-
-                                                                   <!--||||||||||||||||||||ABOUT US |||||||||||||||||-->
+                                                                   <!--|||||||||||||||||||| MENU |||||||||||||||||-->
                                                              <section id="menu">
                                                              <div class="container">
                                                              <div class="row">
@@ -214,17 +196,23 @@ if($days[$today]['status'] == 'Closed') {
                                                <div class="col-sm-10 col-sm-offset-1">
 
 <div class="row">
-                                               <div class="col-sm-3">
-                                                 <a href="#" class="btn btn-block">Lunch</a>
+                                               <div class="col-sm-4">
+                                                 <a href="/themes/sushinabe/menu/Appetizer.pdf" class="btn btn-block" target="_blank">Appetizer</a>
                                                </div>
-                                               <div class="col-sm-3">
-                                                 <a href="#" class="btn btn-block">Dinner</a>
+                                               <div class="col-sm-4">
+                                                 <a href="/themes/sushinabe/menu/Lunch.pdf" class="btn btn-block" target="_blank">Lunch</a>
                                                </div>
-                                               <div class="col-sm-3">
-                                                 <a href="#" class="btn btn-block">Sushi</a>
+                                               <div class="col-sm-4">
+                                                 <a href="/themes/sushinabe/menu/Dinner.pdf" class="btn btn-block" target="_blank">Dinner</a>
                                                </div>
-                                               <div class="col-sm-3">
-                                                 <a href="#" class="btn btn-block">Specials</a>
+                                               <div class="col-sm-4">
+                                                 <a href="/themes/sushinabe/menu/Sushi.pdf" class="btn btn-block" target="_blank">Sushi</a>
+                                               </div>
+                                               <div class="col-sm-4">
+                                                 <a href="/themes/sushinabe/menu/Dessert.pdf" class="btn btn-block" target="_blank">Dessert</a>
+                                               </div>
+                                               <div class="col-sm-4">
+                                                 <a href="/themes/sushinabe/menu/Special.pdf" class="btn btn-block" target="_blank">Specials</a>
                                                </div>
                                              </div>
 
@@ -236,6 +224,31 @@ if($days[$today]['status'] == 'Closed') {
 
                                                              </section>
 
+    
+
+                                                             <!--||||||||||||||||||||||||gallery section ||||||||||||||||-->
+                                                             <section id="gallery">
+                                                             <div class="container">
+                                                             <div class="row">
+
+                                                             <div class="col-md-6 col-xs-12 sub-gallery">
+                                                               <img src="/themes/sushinabe/img/garden_roll.jpg" class="img-responsive" alt=""/> </div>
+                                                             <div class="col-md-6 col-xs-12">
+                                                             <div class="col-md-6 col-xs-6">
+                                                               <img src="/themes/sushinabe/img/gallery2.jpg" class="img-responsive" alt=""/> </div>
+                                                             <div class="col-md-6 col-xs-6">
+                                                               <img src="/themes/sushinabe/img/tomato_with_a_hat.jpg" class="img-responsive" alt=""/> </div>
+                                                             <div class="col-md-12 padding-30">
+                                                             <img src="/themes/sushinabe/img/gallery4.jpg" class="img-responsive" alt=""/> </div>
+                                                             </div>
+
+                                                             </div>
+                                                             </div>
+
+                                                             </section>
+
+
+                                                                 <!--|||||||||||||||||||||||| prefooter ||||||||||||||||-->
                                                              <div class="FooterTop" id="reservations">
                                                              <div class="container">
                                                              <div class="row">

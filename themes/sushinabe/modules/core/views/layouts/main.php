@@ -43,9 +43,9 @@ SushiNabeAsset::register($this);
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav ">
               <li class="active"><a href="#top-header">Home</a></li>
-              <li><a href="#about" class="page-scroll">About Us</a></li>
-              <li><a href="#gallery" class="page-scroll">Gallery</a></li>
+              <!--<li><a href="#about" class="page-scroll">About Us</a></li>-->
               <li><a href="#menu" class="page-scroll">Menu</a></li>
+              <li><a href="#gallery" class="page-scroll">Gallery</a></li>
               <li><a href="#reservations" class="page-scroll">Reservations</a></li>
             </ul>
           </div>
