@@ -4,6 +4,7 @@ return [
     '' => 'core/default/index',
     'contact' => 'core/default/contact',
     'about' => 'tatetownship/default/about',
+    'calendar' => 'tatetownship/default/calendar',
     'government/meeting-minutes' => 'tatetownship/government/minutes',
     'government/board-of-trustees' => 'tatetownship/government/trustees',
     'government/jobs-and-employment' => 'tatetownship/government/jobs',

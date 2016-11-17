@@ -23,4 +23,9 @@ class DefaultController extends Controller
     {
         return $this->render('about');
     }
+
+        public function actionCalendar()
+    {
+        return $this->render('calendar');
+    }
 }
