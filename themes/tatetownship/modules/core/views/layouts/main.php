@@ -51,7 +51,7 @@ TatetownshipAsset::register($this);
             Departments <b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="/departments/maintenance-and-cemetary">Maintenance & Cemetary</a></li>
+            <li><a href="/departments/maintenance-and-cemetery">Maintenance & Cemetery</a></li>
             <li><a href="/departments/zoning-and-planning">Zoning & Planning</a></li>
             <li><a href="/departments/fire-and-ems">Fire & Emergency Services</a></li>
             <li><a href="/departments/deputy-and-sheriff">Deputy & Sheriff</a></li>
@@ -115,7 +115,7 @@ TatetownshipAsset::register($this);
         <h3>Departments</h3>
         <ul>
           <li>
-            <a href="/departments/maintenance-and-cemetary">Mainenance & Cemetary</a>
+            <a href="/departments/maintenance-and-cemetery">Mainenance & Cemetery</a>
           </li>
           <li>
             <a href="/departments/zoning-and-planning">Zoning & Planning</a>

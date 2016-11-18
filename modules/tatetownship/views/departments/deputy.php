@@ -24,7 +24,7 @@
 </p>
      </div>
      <div class="col-md-6 image">
-     <img src="images/feature3.png" class="img-responsive" alt="feature3" />
+     <img src="/themes/tatetownship/img/sheriff-sign.jpg" class="img-responsive" alt="sheriff" />
      </div>
      </div>
      </div>

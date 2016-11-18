@@ -11,7 +11,7 @@
     Special Trustee Meeting will be held on 3:00pm, September 27th, 2016 at the Bethel-Tate Fire Department to discuss finances.
     </p>
     <div class="cta animated fadeInDown">
-    <a href="/news" class="button-outline">Read More</a>
+    <!--<a href="/news" class="button-outline">Read More</a>-->
     <a href="/contact" class="button">Contact Us</a>
     </div>
     <div class="img"></div>
@@ -43,13 +43,13 @@
     <div class="btn-nav prev"></div>
     <div class="btn-nav next"></div>
     <div class="slide active">
-    <img src="/themes/tatetownship/img/index1.png" alt="slide3" />
+    <img src="/themes/tatetownship/img/index1.jpg" alt="slide3" />
     </div>
     <div class="slide">
-    <img src="/themes/tatetownship/img/index2.png" alt="slide4" />
+    <img src="/themes/tatetownship/img/index2.jpg" alt="slide4" />
     </div>
     <div class="slide">
-    <img src="/themes/tatetownship/img/index3.png" alt="slide1" />
+    <img src="/themes/tatetownship/img/index3.jpg" alt="slide1" />
     </div>
     </div>
     </div>
