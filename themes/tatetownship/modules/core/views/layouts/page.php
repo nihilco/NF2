@@ -85,9 +85,9 @@ TatetownshipAsset::register($this);
       <div class="col-sm-3 menu">
         <h3>Menu</h3>
         <ul>
-          <li>
+          <!--<li>
             <a href="/news">News</a>
-          </li>
+          </li>-->
           <li>
             <a href="/about">About us</a>
           </li>
