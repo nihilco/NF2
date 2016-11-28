@@ -11,7 +11,7 @@
         <div class="col-md-6 info">
           <h4>Meet George Eckert, Zoning Inspector</h4>
           <p>
-     If you have planning/zoning concerns, or if you request more information, you can contact George Eckert at <a href="mailto:jeckert@tatetownship.org">jeckert@tatetownship.org</a>.
+     If you have planning/zoning concerns, or if you request more information, you can contact George Eckert at <a href="mailto:geckert@tatetownship.org">geckert@tatetownship.org</a>.
           </p>
         </div>
         <div class="col-md-6 image">

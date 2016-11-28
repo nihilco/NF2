@@ -11,5 +11,7 @@ return [
     'departments/maintenance-and-cemetery' => 'tatetownship/departments/maintenance',
     'departments/zoning-and-planning' => 'tatetownship/departments/zoning',
     'departments/fire-and-ems' => 'tatetownship/departments/fd',
+    'departments/fire-and-ems/apparatus' => 'tatetownship/departments/apparatus',
+    'departments/fire-and-ems/staff' => 'tatetownship/departments/staff',
     'departments/deputy-and-sheriff' => 'tatetownship/departments/deputy',
 ];

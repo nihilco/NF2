@@ -29,6 +29,16 @@ class DepartmentsController extends Controller
         return $this->render('fd');
     }
 
+    public function actionApparatus()
+    {
+        return $this->render('apparatus');
+    }
+
+    public function actionStaff()
+    {
+        return $this->render('staff');
+    }
+
     public function actionDeputy()
     {
         return $this->render('deputy');
