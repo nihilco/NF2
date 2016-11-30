@@ -14,4 +14,8 @@ return [
     'departments/fire-and-ems/apparatus' => 'tatetownship/departments/apparatus',
     'departments/fire-and-ems/staff' => 'tatetownship/departments/staff',
     'departments/deputy-and-sheriff' => 'tatetownship/departments/deputy',
+
+    'login' => 'ac/users/login',
+    'logout' => 'ac/users/logout',
+    'signup' => 'ac/users/signup',
 ];

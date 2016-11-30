@@ -78,7 +78,21 @@
   </div>
   <div class="row">
     <div class="col-sm-3">
-      <img src="/themes/tatetownship/img/fd/staff/.jpg" alt="" class="img-responsive" />
+      <img src="/themes/tatetownship/img/fd/staff/oneil_sean.jpg" alt="" class="img-responsive" />
+    </div>
+    <div class="col-sm-9">
+     <h4>Sean O&#39;Neil<small></small></h4>
+     <p>
+     I have been a member of BTFD since 1993 when I joined as a cadet at the age of 14.  After I graduated high school, I moved up to a paid per call status which I remained until I was hired full-time in 2003.  In 2009 I was promoted to my current rank of Lieutenant.  I currently hold a State of Ohio Firefighter II certification, Paramedic certification, and Fire Inspector certification.  I have been trained to the technician level in Hazmat, Rope Rescue, and Trench Rescue.
+     </p>
+     <p>
+     My wife and I have two wonderful children who I spend as much time as I can with when I am not at the station.
+     </p>
+    </div>
+  </div>         
+  <div class="row">
+    <div class="col-sm-3">
+      <!--<img src="/themes/tatetownship/img/fd/staff/.jpg" alt="" class="img-responsive" />-->
     </div>
     <div class="col-sm-9">
      <h4>Kent Bryant<small></small></h4>
@@ -89,40 +103,7 @@ Started in the fire service in 1984 in California.  I had joined Orange Co Fire 
   </div>
   <div class="row">
     <div class="col-sm-3">
-      <img src="/themes/tatetownship/img/fd/staff/.jpg" alt="" class="img-responsive" />
-    </div>
-    <div class="col-sm-9">
-     <h4>James G. Burns<small></small></h4>
-     <p>
-     I, James G. Burns, am a life long resident of Tate Township.  I graduated from Bethel-Tate High school.  I married my high school sweetheart, Corinne, in 1975.  To this union two children were born.
-     </p>
-     <p>
-     My daughter, Tiffiany, married David Riddle.  They have two children, Nathan and Makenzie.   They also live in Tate-Township.  My son, James, married Tiffany Balk and they reside in Winchester, Kentucky.
-     </p>
-     <p>
-     I started working at the family business in October 1968.  I took over the business in 1990.  And I am there still today.
-     </p>
-     <p>
-     I joined Bethel-Tate Fire Department in 1973.  I enjoyed many years serving Tate-Township in that capacity until the late 80’s.
-     </p>
-     <p>
-     I am a member and Past Master of Bethel Lodge 61.  I am a past member of the Bethel Lions Club and served as President for two years.  I served as Assistant Scout Master for Boy Scout Troop 196.  I am a member of the Sons of American Legion, Bethel Post 406.  I sponsored the SADD chapter at Bethel-Tate High School and assisted in numerous simulations of drunk driving accidents for the chapter.  I have sponsored numerous local baseball and softball teams.  I have supplied the touchdown cannon for Bethel-Tate High School football games for ten plus years.
-     </p>
-     <p>
-     I was elected as Tate Township Trustee in 1994 to serve a two year unexpired term.  I was then defeated and then re-elected.  I have held that position ever since.  During the years I have observed Tate Township changing.  I have done my best to keep ahead of the changes to better serve the residents of the township.  I am a strong supporter of our Fire Department, who is second to none.  I am extremely proud of our Road and Cemetery Departments.  Our Zoning Department does its best to keep up with our zoning regulations.
-     </p>
-     <p>
-     Remember this is your Township to enjoy and protect.  I will continue to do my best to serve our community.  Thank you.
-     </p>
-     <p>
-     Sincerely,<br />
-     James G. Burns       
-     </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3">
-      <img src="/themes/tatetownship/img/fd/staff/.jpg" alt="" class="img-responsive" />
+      <!--<img src="/themes/tatetownship/img/fd/staff/.jpg" alt="" class="img-responsive" />-->
     </div>
     <div class="col-sm-9">
      <h4>Chris Cooper<small></small></h4>
@@ -150,36 +131,6 @@ Started in the fire service in 1984 in California.  I had joined Orange Co Fire 
   </div>
   <div class="row">
     <div class="col-sm-3">
-      <img src="/themes/tatetownship/img/fd/staff/.jpg" alt="" class="img-responsive" />
-    </div>
-    <div class="col-sm-9">
-     <h4>Howard S. Daugherty<small></small></h4>
-     <p>
-     Born in Bethel Ohio, graduated from Bethel-Tate High School in 1965, Married to Terri, 46 years two Children, two Grandchildren, and four Great Grandchildren.
-     </p>
-     <p>
-     Owner of a Distributorship for 38 years for Little Debbie Snack Cakes and a Veteran Services Advocate since 1999.
-     </p>
-     <p>
-     A Life Member Bethel American Legion, Disabled American Veterans, Veterans of Foreign Wars, AMVETS, Purple Heart, The Vietnam Veterans of America and the Ohio Military Hall of Fame for Valor.
-     </p>
-     <p>
-     A life Member of Clermont County Historical Association, and the Bethel Historical Association, a twenty-five year member of the Bethel Lions Club, a member of the Bethel Baptist Church.
-     </p>
-     <p>
-     Currently Executive Director of Clermont County Veterans Service Commission, Batavia Ohio, and Chairman of Tate Township Trustees.
-     <address>
-     Howard S. Daugherty
-     Executive Director
-     Clermont County Veterans Service Commission
-     P: 513-732-7377
-     F: 513-732-7639
-     </address>
-     </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3">
       <img src="/themes/tatetownship/img/fd/staff/griffith_randy.jpg" alt="" class="img-responsive" />
     </div>
     <div class="col-sm-9">
@@ -191,7 +142,7 @@ Started in the fire service in 1984 in California.  I had joined Orange Co Fire 
   </div>
   <div class="row">
     <div class="col-sm-3">
-      <img src="/themes/tatetownship/img/fd/staff/.jpg" alt="" class="img-responsive" />
+      <!--<img src="/themes/tatetownship/img/fd/staff/.jpg" alt="" class="img-responsive" />-->
     </div>
     <div class="col-sm-9">
      <h4>Rich Moeckel<small></small></h4>
@@ -237,20 +188,6 @@ Started in the fire service in 1984 in California.  I had joined Orange Co Fire 
      </p>
      <p>
      During my time off I enjoy hunting, fishing, reading and building things by hand.
-     </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3">
-      <img src="/themes/tatetownship/img/fd/staff/oneil_sean.jpg" alt="" class="img-responsive" />
-    </div>
-    <div class="col-sm-9">
-     <h4>Sean O&#39;Neil<small></small></h4>
-     <p>
-     I have been a member of BTFD since 1993 when I joined as a cadet at the age of 14.  After I graduated high school, I moved up to a paid per call status which I remained until I was hired full-time in 2003.  In 2009 I was promoted to my current rank of Lieutenant.  I currently hold a State of Ohio Firefighter II certification, Paramedic certification, and Fire Inspector certification.  I have been trained to the technician level in Hazmat, Rope Rescue, and Trench Rescue.
-     </p>
-     <p>
-     My wife and I have two wonderful children who I spend as much time as I can with when I am not at the station.
      </p>
     </div>
   </div>
