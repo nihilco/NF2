@@ -34,6 +34,20 @@
 <div class="col-md-3">
 <img src="/themes/tatetownship/img/fd/staff/stowell_rick.jpg" alt="Rick Stowell" class="img-responsive" />
 </div>
+<div class="col-md-3">
+<address>
+<strong>Bethel Tate Fire Department</strong><br />
+149 N. East Street<br />
+Bethel, OH 45106<br />
+<a href="tel:5137344444">(513)734-4444</a><br />
+<a href="mailto:fire-ems@tatetownship.org">fire-ems@tatetownship.org</a><br />
+Monday - Friday 9am to 5pm<br />
+<br />
+<strong>Chief Richard A. Stowell</strong><br />
+     <a href="tel:5137344444">(513)734-4444</a><br />
+<a href="mailto:rstowell@tatetownship.org">rstowell@tatetownship.org</a>
+</address>
+</div>
 </div>
 
      

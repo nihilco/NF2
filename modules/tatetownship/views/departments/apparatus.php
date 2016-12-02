@@ -39,7 +39,7 @@
     </div>
     <div class="col-sm-4">
       <img src="/themes/tatetownship/img/fd/apparatus/1995_rescue1.jpg" alt="1984 Engine" class="img-responsive" />
-      <h4>Rescuer<br/><small></small></h4>     
+      <h4>Rescue<br/><small></small></h4>     
     </div>
     <div class="col-sm-4">
       <img src="/themes/tatetownship/img/fd/apparatus/1989_tender1.jpg" alt="1984 Engine" class="img-responsive" />

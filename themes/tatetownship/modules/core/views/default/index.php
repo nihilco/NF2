@@ -8,7 +8,7 @@
     Clermont County, Ohio
     </h1>
     <p class="sub-text animated fadeInDown">
-    Special Trustee Meeting will be held on 3:00pm, September 27th, 2016 at the Bethel-Tate Fire Department to discuss finances.
+    The Trustees will meet in executive session to discuss contract negotiations with the Fire Department Union on December 13th at 5pm.
     </p>
     <div class="cta animated fadeInDown">
     <!--<a href="/news" class="button-outline">Read More</a>-->
