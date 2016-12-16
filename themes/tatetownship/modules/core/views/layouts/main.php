@@ -129,12 +129,12 @@ TatetownshipAsset::register($this);
         </ul>
       </div>
       <div class="col-sm-2 menu">
-        <h3>Social</h3>
+        <!--<h3>Social</h3>
         <ul>
           <li>
             <a href="#">Facebook</a>
           </li>
-        </ul>
+        </ul>-->
       </div>
     </div>
     <div class="row credits">
