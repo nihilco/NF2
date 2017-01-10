@@ -14,6 +14,7 @@ use app\modules\ac\models\User;
  * @property string $stripe_account_id
  * @property string $secret_key
  * @property string $publishable_key
+ * @property string $mode
  * @property string $date_created
  * @property string $date_updated
  *
@@ -36,10 +37,11 @@ class Account extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['account_status_id', 'user_id', 'stripe_account_id', 'secret_key', 'publishable_key'], 'required'],
+            [['account_status_id', 'user_id', 'stripe_account_id', 'secret_key', 'publishable_key', 'mode'], 'required'],
             [['account_status_id', 'user_id'], 'integer'],
             [['date_created', 'date_updated'], 'safe'],
             [['stripe_account_id', 'secret_key', 'publishable_key'], 'string', 'max' => 128],
+            [['mode'], 'string', 'max' => 8],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
             [['account_status_id'], 'exist', 'skipOnError' => true, 'targetClass' => AccountStatus::className(), 'targetAttribute' => ['account_status_id' => 'id']],
         ];

@@ -16,10 +16,26 @@ use yii\helpers\ArrayHelper;
  */
 class CreateAccountForm extends Model
 {
-    public $user_id;
+    public $accountType;
+
+    public $businessName;
+    public $businessTaxId;
+
+    public $firstname;
+    public $lastname;
+    public $dobMonth;
+    public $dobDay;
+    public $dobYear;
+    public $ssn4;
+    public $address1;
+    public $address2;
+    public $city;
+    public $state;
+    public $postalCode;
     public $country_id;
-    public $managed;
     
+    public $tosAccept;
+
     /**
      * @return array the validation rules.
      */
@@ -27,16 +43,17 @@ class CreateAccountForm extends Model
     {
         return [
             // 
-            [['user_id', 'country_id', 'managed'], 'required'],
-            ['managed', 'boolean', 'trueValue' => true, 'falseValue' => false],
-            [['user_id', 'country_id'], 'integer'],
+            [['accountType', 'firstname', 'lastname', 'dobMonth', 'dobDay', 'dobYear', 'ssn4', 'address1', 'address2', 'city', 'state', 'postalCode', 'country_id', 'tosAccept'], 'required'],
+            ['tosAccept', 'boolean', 'trueValue' => true, 'falseValue' => false],
+            [['country_id'], 'integer'],
         ];
     }
 
     public function attributeLabels()
     {
         return [
-            'user_id' => 'User',
+            '' => '',
+                        'user_id' => 'User',
             'country_id' => 'Country',
             'managed' => 'Managed',
         ];
@@ -52,19 +69,23 @@ class CreateAccountForm extends Model
             return false;
         }
 
-
+        $user = User::find()->where(['id' => $this->user_id])->one();
+        $country = Country::find()->where(['id' => $this->country_id])->one();
 
         $sa = \Yii::$app->stripe->account->createAccount($user->email, $country->code, $this->managed);
 
-        $account = new Account();
-        $account->user_id = $user->id;
-        $account->stripe_account_id = $sa->id;
-
-        if(!$account->save()) {
+        $this->_account = new Account();
+        $this->_account->account_status_id = 4; // Add a db call instead of static value
+        $this->_account->user_id = $this->user_id;
+        $this->_account->stripe_account_id = $sa->id;
+        $this->_account->secret_key = $sa->keys['secret'];
+        $this->_account->publishable_key = $sa->keys['publishable'];
+        
+        if(!$this->_account->save()) {
             return null;
         }
-        
-        return $account;
+
+        return $this;
     }
 
     public function getCountryArray()
@@ -75,6 +96,15 @@ class CreateAccountForm extends Model
     public function getUserArray()
     {
         return ArrayHelper::map(User::find()->all(), 'id', 'email');
+    }
+
+    public function getAccountId()
+    {
+        if($this->_account) {
+            return $this->_account->id;
+        }
+
+        return null;
     }
 
 }

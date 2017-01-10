@@ -29,6 +29,7 @@ class SignupForm extends Model
             ['email', 'unique', 'targetClass' => '\app\modules\ac\models\User', 'message' => 'This email address has already been taken.'],
             ['password', 'string', 'min' => 6],
             ['password_repeat', 'compare', 'compareAttribute' => 'password'],
+            ['birthday', 'date', 'format' => 'php:m/d/Y'],
         ];
     }
 

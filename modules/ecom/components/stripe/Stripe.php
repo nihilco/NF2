@@ -38,6 +38,7 @@ class Stripe extends \yii\base\Component {
     public $customer;
     public $account;
     public $charge;
+    public $externalAccount;
     
     /**
      * @see Init extension default
@@ -63,6 +64,7 @@ class Stripe extends \yii\base\Component {
         $this->customer = new Customer();
         $this->account = new Account();
         $this->charge = new Charge();
+        $this->externalAccount = new ExternalAccount();
         
         parent::init();
     }

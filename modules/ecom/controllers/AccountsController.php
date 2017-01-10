@@ -8,6 +8,7 @@ use app\modules\ecom\models\search\AccountSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\modules\ecom\models\forms\CreateAccountForm;
 
 /**
  * AccountsController implements the CRUD actions for Account model.
@@ -110,9 +111,9 @@ class AccountsController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Account();
+        $model = new CreateAccountForm();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->create()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
