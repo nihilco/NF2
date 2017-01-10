@@ -19,7 +19,7 @@ use Yii;
  * @property string $country
  * @property string $website
  * @property string $date_created
- * @property string $date_updated
+ * @property string $timestamp
  *
  * @property Printing[] $printings
  */
@@ -41,7 +41,7 @@ class Publisher extends \yii\db\ActiveRecord
         return [
             [['name', 'description', 'address1', 'city', 'state', 'zipcode', 'country', 'website'], 'required'],
             [['description'], 'string'],
-            [['parent', 'date_created', 'date_updated'], 'safe'],
+            [['parent', 'date_created', 'timestamp'], 'safe'],
             [['name', 'parent', 'website'], 'string', 'max' => 100],
             [['address1', 'address2', 'city'], 'string', 'max' => 150],
             [['state', 'country'], 'string', 'max' => 2],
@@ -66,7 +66,7 @@ class Publisher extends \yii\db\ActiveRecord
             'country' => 'Country',
             'website' => 'Website',
             'date_created' => 'Date Created',
-            'date_updated' => 'Date Updated',
+            'timestamp' => 'Timestamp',
         ];
     }
 
@@ -76,7 +76,6 @@ class Publisher extends \yii\db\ActiveRecord
             if ($this->isNewRecord) {
                 $this->date_created = date("Y-m-d H:i:s");
             }
-            $this->date_updated = date("Y-m-d H:i:s");
             return true;
         }
         return false;

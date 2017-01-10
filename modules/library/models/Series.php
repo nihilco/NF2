@@ -12,7 +12,7 @@ use Yii;
  * @property string $description
  * @property integer $total_books_in_series
  * @property string $date_created
- * @property string $date_updated
+ * @property string $timestamp
  *
  * @property Book[] $books
  */
@@ -35,7 +35,7 @@ class Series extends \yii\db\ActiveRecord
             [['name', 'description'], 'required'],
             [['description'], 'string'],
             [['total_books_in_series'], 'integer'],
-            [['date_created', 'date_updated'], 'safe'],
+            [['date_created', 'timestamp'], 'safe'],
             [['name'], 'string', 'max' => 100],
         ];
     }
@@ -51,7 +51,7 @@ class Series extends \yii\db\ActiveRecord
             'description' => 'Description',
             'total_books_in_series' => 'Total Books In Series',
             'date_created' => 'Date Created',
-            'date_updated' => 'Date Updated',
+            'timestamp' => 'Timestamp',
         ];
     }
 
@@ -61,7 +61,6 @@ class Series extends \yii\db\ActiveRecord
             if ($this->isNewRecord) {
                 $this->date_created = date("Y-m-d H:i:s");
             }
-            $this->date_updated = date("Y-m-d H:i:s");
             return true;
         }
         return false;

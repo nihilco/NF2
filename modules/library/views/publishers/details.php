@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'country',
             'website',
             'date_created',
-            'date_updated',
+            'timestamp',
         ],
     ]) ?>
     

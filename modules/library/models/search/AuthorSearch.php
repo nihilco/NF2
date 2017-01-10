@@ -19,7 +19,7 @@ class AuthorSearch extends Author
     {
         return [
             [['id', 'image_id'], 'integer'],
-            [['prefix', 'first_name', 'middle_name', 'last_name', 'suffix', 'description', 'website', 'date_created', 'date_updated'], 'safe'],
+            [['prefix', 'first_name', 'middle_name', 'last_name', 'suffix', 'description', 'website', 'date_created', 'timestamp'], 'safe'],
         ];
     }
 
@@ -62,7 +62,7 @@ class AuthorSearch extends Author
             'id' => $this->id,
             'image_id' => $this->image_id,
             'date_created' => $this->date_created,
-            'date_updated' => $this->date_updated,
+            'timestamp' => $this->timestamp,
         ]);
 
         $query->andFilterWhere(['like', 'prefix', $this->prefix])

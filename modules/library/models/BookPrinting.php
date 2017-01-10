@@ -10,7 +10,6 @@ use Yii;
  * @property integer $id
  * @property integer $book_id
  * @property integer $publisher_id
- * @property integer $edition_id
  * @property integer $format_id
  * @property string $printing
  * @property string $number_line
@@ -24,7 +23,7 @@ use Yii;
  * @property string $date_published
  * @property string $date_bought
  * @property string $date_created
- * @property string $date_updated
+ * @property string $timestamp
  *
  * @property Format $format
  * @property Book $book
@@ -47,15 +46,14 @@ class BookPrinting extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['book_id', 'publisher_id', 'edition_id', 'format_id', 'printing', 'quantity', 'date_published'], 'required'],
-            [['book_id', 'publisher_id', 'edition_id', 'format_id', 'quantity', 'signed', 'personalized'], 'integer'],
+            [['book_id', 'publisher_id', 'format_id', 'printing', 'quantity', 'date_published'], 'required'],
+            [['book_id', 'publisher_id', 'format_id', 'quantity', 'signed', 'personalized'], 'integer'],
             [['paid', 'price', 'value', 'sell'], 'number'],
-            [['date_published', 'date_bought', 'date_created', 'date_updated'], 'safe'],
+            [['date_published', 'date_bought', 'date_created', 'timestamp'], 'safe'],
             [['printing', 'number_line'], 'string', 'max' => 100],
             [['format_id'], 'exist', 'skipOnError' => true, 'targetClass' => Format::className(), 'targetAttribute' => ['format_id' => 'id']],
             [['book_id'], 'exist', 'skipOnError' => true, 'targetClass' => Book::className(), 'targetAttribute' => ['book_id' => 'id']],
             [['publisher_id'], 'exist', 'skipOnError' => true, 'targetClass' => Publisher::className(), 'targetAttribute' => ['publisher_id' => 'id']],
-            [['edition_id'], 'exist', 'skipOnError' => true, 'targetClass' => Edition::className(), 'targetAttribute' => ['edition_id' => 'id']],
         ];
     }
 
@@ -82,7 +80,7 @@ class BookPrinting extends \yii\db\ActiveRecord
             'date_published' => 'Date Published',
             'date_bought' => 'Date Bought',
             'date_created' => 'Date Created',
-            'date_updated' => 'Date Updated',
+            'timestamp' => 'Timestamp',
         ];
     }
 
@@ -92,7 +90,6 @@ class BookPrinting extends \yii\db\ActiveRecord
             if ($this->isNewRecord) {
                 $this->date_created = date("Y-m-d H:i:s");
             }
-            $this->date_updated = date("Y-m-d H:i:s");
             return true;
         }
         return false;
@@ -122,11 +119,4 @@ class BookPrinting extends \yii\db\ActiveRecord
         return $this->hasOne(Publisher::className(), ['id' => 'publisher_id']);
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getEdition()
-    {
-        return $this->hasOne(Edition::className(), ['id' => 'edition_id']);
-    }
 }

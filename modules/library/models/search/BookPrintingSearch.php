@@ -18,8 +18,8 @@ class BookPrintingSearch extends BookPrinting
     public function rules()
     {
         return [
-            [['id', 'book_id', 'publisher_id', 'edition_id', 'format_id', 'quantity', 'signed', 'personalized'], 'integer'],
-            [['printing', 'number_line', 'date_published', 'date_bought', 'date_created', 'date_updated'], 'safe'],
+            [['id', 'book_id', 'publisher_id', 'format_id', 'quantity', 'signed', 'personalized'], 'integer'],
+            [['printing', 'number_line', 'date_published', 'date_bought', 'date_created', 'date_timestamp'], 'safe'],
             [['paid', 'value', 'sell'], 'number'],
         ];
     }
@@ -63,7 +63,6 @@ class BookPrintingSearch extends BookPrinting
             'id' => $this->id,
             'book_id' => $this->book_id,
             'publisher_id' => $this->publisher_id,
-            'edition_id' => $this->edition_id,
             'format_id' => $this->format_id,
             'paid' => $this->paid,
             'value' => $this->value,
@@ -74,7 +73,7 @@ class BookPrintingSearch extends BookPrinting
             'date_published' => $this->date_published,
             'date_bought' => $this->date_bought,
             'date_created' => $this->date_created,
-            'date_updated' => $this->date_updated,
+            'timestamp' => $this->timestamp,
         ]);
 
         $query->andFilterWhere(['like', 'printing', $this->printing])

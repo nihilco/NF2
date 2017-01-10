@@ -44,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'rating',
             'order_in_series',
             'date_created',
-            'date_updated',
+            'timestamp',
         ],
     ]) ?>
     

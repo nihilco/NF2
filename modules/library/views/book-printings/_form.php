@@ -26,11 +26,6 @@ use app\modules\library\models\Publisher;
     ['prompt'=>'Select Publisher']
 );?>
 
-<?= $form->field($model, 'edition_id')->dropdownList(
-    Edition::find()->select(['name', 'id'])->indexBy('id')->column(),
-    ['prompt'=>'Select Edition']
-);?>
-
 <?= $form->field($model, 'format_id')->dropdownList(
     Format::find()->select(['name', 'id'])->indexBy('id')->column(),
     ['prompt'=>'Select Format']

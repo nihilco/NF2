@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
             //'description:ntext',
             //'date_created',
-            //'date_updated',
+            //'timestamp',
 
             ['class' => 'app\library\grid\ActionColumn'],
         ],

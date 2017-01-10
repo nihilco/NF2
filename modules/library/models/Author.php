@@ -17,6 +17,7 @@ use Yii;
  * @property string $description
  * @property string $website
  * @property string $date_created
+ * @property string $timestamp
  *
  * @property Image $image
  * @property BookAuthor[] $bookAuthors
@@ -40,7 +41,7 @@ class Author extends \yii\db\ActiveRecord
             [['image_id'], 'integer'],
             [['first_name', 'last_name'], 'required'],
             [['description'], 'string'],
-            [['date_created'], 'safe'],
+            [['date_created', 'timestamp'], 'safe'],
             [['prefix', 'suffix'], 'string', 'max' => 3],
             [['first_name', 'middle_name', 'last_name', 'website'], 'string', 'max' => 100],
             [['image_id'], 'exist', 'skipOnError' => true, 'targetClass' => Image::className(), 'targetAttribute' => ['image_id' => 'id']],

@@ -19,7 +19,7 @@ class PublisherSearch extends Publisher
     {
         return [
             [['id'], 'integer'],
-            [['name', 'description', 'address1', 'address2', 'city', 'state', 'zipcode', 'country', 'website', 'date_created', 'date_updated'], 'safe'],
+            [['name', 'description', 'address1', 'address2', 'city', 'state', 'zipcode', 'country', 'website', 'date_created', 'timestamp'], 'safe'],
         ];
     }
 
@@ -61,7 +61,7 @@ class PublisherSearch extends Publisher
         $query->andFilterWhere([
             'id' => $this->id,
             'date_created' => $this->date_created,
-            'date_updated' => $this->date_updated,
+            'timestamp' => $this->timestamp,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])

@@ -18,8 +18,8 @@ class BookSearch extends Book
     public function rules()
     {
         return [
-            [['id', 'language_id', 'series_id', 'order_in_series'], 'integer'],
-            [['isbn', 'title', 'subtitle', 'date_first_published', 'date_created', 'date_updated'], 'safe'],
+            [['id', 'language_id', 'series_id', 'edition_id', 'order_in_series'], 'integer'],
+            [['isbn', 'title', 'subtitle', 'date_first_published', 'date_created', 'timestamp'], 'safe'],
             [['rating'], 'number'],
         ];
     }
@@ -63,11 +63,12 @@ class BookSearch extends Book
             'id' => $this->id,
             'language_id' => $this->language_id,
             'series_id' => $this->series_id,
+            'edition_id' => $this->edition_id,
             'date_first_published' => $this->date_first_published,
             'rating' => $this->rating,
             'order_in_series' => $this->order_in_series,
             'date_created' => $this->date_created,
-            'date_updated' => $this->date_updated,
+            'timestamp' => $this->timestamp,
         ]);
 
         $query->andFilterWhere(['like', 'isbn', $this->isbn])

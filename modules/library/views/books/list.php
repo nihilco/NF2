@@ -37,6 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'isbn',
             'title',
             // 'subtitle',
+            'edition_id',
             'date_first_published',
             // 'rating',
             // 'order_in_series',

@@ -11,7 +11,7 @@ use Yii;
  * @property string $name
  * @property string $description
  * @property string $date_created
- * @property string $date_updated
+ * @property string $timestamp
  *
  * @property BookPrinting[] $bookPrintings
  */
@@ -33,7 +33,7 @@ class Edition extends \yii\db\ActiveRecord
         return [
             [['name', 'description'], 'required'],
             [['description'], 'string'],
-            [['date_created', 'date_updated'], 'safe'],
+            [['date_created', 'timestamp'], 'safe'],
             [['name'], 'string', 'max' => 100],
         ];
     }
@@ -58,7 +58,6 @@ class Edition extends \yii\db\ActiveRecord
             if ($this->isNewRecord) {
                 $this->date_created = date("Y-m-d H:i:s");
             }
-            $this->date_updated = date("Y-m-d H:i:s");
             return true;
         }
         return false;

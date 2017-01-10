@@ -10,6 +10,7 @@ use Yii;
  * @property integer $id
  * @property integer $language_id
  * @property integer $series_id
+ * @property integer $edition_id
  * @property string $isbn
  * @property string $title
  * @property string $subtitle
@@ -17,7 +18,7 @@ use Yii;
  * @property string $rating
  * @property integer $order_in_series
  * @property string $date_created
- * @property string $date_updated
+ * @property string $timestamp
  *
  * @property Author[] $authors
  * @property Image[] $images
@@ -41,15 +42,16 @@ class Book extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['language_id', 'isbn', 'title', 'date_first_published'], 'required'],
-            [['language_id', 'series_id', 'order_in_series'], 'integer'],
-            [['date_first_published', 'date_created', 'date_updated'], 'safe'],
+            [['language_id', 'isbn', 'title', 'edition_id', 'date_first_published'], 'required'],
+            [['language_id', 'series_id', 'edition_id', 'order_in_series'], 'integer'],
+            [['date_first_published', 'date_created', 'timestamp'], 'safe'],
             [['rating'], 'number'],
             [['isbn'], 'string', 'max' => 13],
             [['title', 'subtitle'], 'string', 'max' => 100],
             [['isbn'], 'unique'],
             [['language_id'], 'exist', 'skipOnError' => true, 'targetClass' => Language::className(), 'targetAttribute' => ['language_id' => 'id']],
             [['series_id'], 'exist', 'skipOnError' => true, 'targetClass' => Series::className(), 'targetAttribute' => ['series_id' => 'id']],
+            [['edition_id'], 'exist', 'skipOnError' => true, 'targetClass' => Edition::className(), 'targetAttribute' => ['edition_id' => 'id']],
         ];
     }
 
@@ -69,7 +71,7 @@ class Book extends \yii\db\ActiveRecord
             'rating' => 'Rating',
             'order_in_series' => 'Order In Series',
             'date_created' => 'Date Created',
-            'date_updated' => 'Date Updated',
+            'timestamp' => 'Timestamp',
         ];
     }
 
@@ -79,7 +81,6 @@ class Book extends \yii\db\ActiveRecord
             if ($this->isNewRecord) {
                 $this->date_created = date("Y-m-d H:i:s");
             }
-            $this->date_updated = date("Y-m-d H:i:s");
             return true;
         }
         return false;
@@ -123,5 +124,13 @@ class Book extends \yii\db\ActiveRecord
     public function getSeries()
     {
         return $this->hasOne(Series::className(), ['id' => 'series_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getEdition()
+    {
+        return $this->hasOne(Edition::className(), ['id' => 'edition_id']);
     }
 }

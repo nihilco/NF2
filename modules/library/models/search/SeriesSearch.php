@@ -19,7 +19,7 @@ class SeriesSearch extends Series
     {
         return [
             [['id', 'total_books_in_series'], 'integer'],
-            [['name', 'description', 'date_created', 'date_updated'], 'safe'],
+            [['name', 'description', 'date_created', 'timestamp'], 'safe'],
         ];
     }
 
@@ -62,7 +62,7 @@ class SeriesSearch extends Series
             'id' => $this->id,
             'total_books_in_series' => $this->total_books_in_series,
             'date_created' => $this->date_created,
-            'date_updated' => $this->date_updated,
+            'timestamp' => $this->timestamp,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])

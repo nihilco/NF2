@@ -19,7 +19,7 @@ class EditionSearch extends Edition
     {
         return [
             [['id'], 'integer'],
-            [['name', 'description', 'date_created', 'date_updated'], 'safe'],
+            [['name', 'description', 'date_created', 'timestamp'], 'safe'],
         ];
     }
 
@@ -61,7 +61,7 @@ class EditionSearch extends Edition
         $query->andFilterWhere([
             'id' => $this->id,
             'date_created' => $this->date_created,
-            'date_updated' => $this->date_updated,
+            'timestamp' => $this->timestamp,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])

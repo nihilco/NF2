@@ -34,7 +34,6 @@ $this->params['breadcrumbs'][] = $this->title;
             //'id',
             'book_id',
             //'publisher_id',
-            'edition_id',
             'format_id',
             'printing',
             // 'number_line',
@@ -48,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'date_published',
             // 'date_bought',
             // 'date_created',
-            // 'date_updated',
+            // 'timestamp',
 
             ['class' => 'app\library\grid\ActionColumn'],
         ],
