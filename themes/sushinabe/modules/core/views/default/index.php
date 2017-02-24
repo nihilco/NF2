@@ -11,15 +11,15 @@
       <ol class="carousel-indicators hidden-xs">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <!--<li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>-->
 
       </ol>
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
-
+<!--
         <div class="item height-of-slider active">
        <img src="/themes/sushinabe/img/slider3.jpg" alt="#" class="img-responsive" >
           <div class="hero">
@@ -32,7 +32,8 @@
 
           </div>
         </div>
-
+-->
+<!--
             <div class="item height-of-slider">
        <img src="/themes/sushinabe/img/christmas-wine.jpg" alt="#" class="img-responsive" >
           <div class="hero">
@@ -44,7 +45,8 @@
 
           </div>
         </div>
-
+-->
+<!--
             <div class="item height-of-slider">
        <img src="/themes/sushinabe/img/holiday_table_final.jpg" alt="#" class="img-responsive" >
           <div class="hero">
@@ -58,7 +60,7 @@
 
           </div>
         </div>
-
+-->
         <div class="item height-of-slider">
          <img src="/themes/sushinabe/img/slider_image.jpg" alt="#" class="img-responsive" >
          <div class="hero">
